@@ -1,5 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #9a1d86, #1595be);
+    font-weight: bold;
 }
 
 .player {
@@ -12,8 +14,10 @@ body {
 
 .wrapper {
     border: 1px solid transparent;
-    padding: 30px;
+    padding: 20px;
+    width: 250px;
     border-radius: 20px;
+    background-color: #ddd;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -22,22 +26,22 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-   }
+}
 
 .track-art {
     margin: 25px;
     height: 250px;
     width: 250px;
-    border: 2px solid #fff;
+    border: 2px solid #FFFAFA;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    -moz-box-shadow: 0px 6px 5px #ccc;
-    -webkit-box-shadow: 0px 6px 5px #ccc;
-    box-shadow: 0px 6px 5px #ccc;
+    -moz-box-shadow: 0px 6px 5px black;
+    -webkit-box-shadow: 0px 6px 5px black;
+    box-shadow: 0px 6px 5px black;
     -moz-border-radius: 190px;
     -webkit-border-radius: 190px;
-    border-radius: 190px
+    border-radius: 190px;
 }
 
 .now-playing {
@@ -45,18 +49,19 @@ body {
 }
 
 .track-name {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 .track-artist {
     margin-top: 5px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .buttons {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -69,7 +74,9 @@ body {
 .playpause-track,
 .prev-track,
 .next-track {
-    padding: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     opacity: 0.8;
     transition: opacity .2s;
 }
@@ -94,7 +101,7 @@ body {
     -moz-appearance: none;
     appearance: none;
     height: 5px;
-    background: #83a9ff;
+    background: #83A9FF;
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
@@ -106,10 +113,10 @@ body {
     appearance: none;
     width: 15px;
     height: 15px;
-    background: whitesmoke;
-    border: 3px solid #3774ff;
+    background: white;
+    border: 3px solid #3774FF;
+    cursor: grab;
     border-radius: 100%;
-    cursor: pointer;
 }
 
 .seek_slider:hover,
@@ -139,7 +146,8 @@ i,
 i.fa-play-circle,
 i.fa-pause-circle,
 i.fa-step-forward,
-i.fa-step-backward {
+i.fa-step-backward,
+p {
     cursor: pointer;
 }
 
@@ -162,19 +170,19 @@ i.fa-step-backward {
 }
 
 .loader {
-    height: 70px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
-.loader,
-.stroke {
+.loader .stroke {
     background: #f1f1f1;
     height: 150%;
     width: 10px;
     border-radius: 50px;
-    margin: 0px 50px;
+    margin: 0 5px;
     animation: animate 1.4s linear infinite;
 }
 
@@ -185,6 +193,7 @@ i.fa-step-backward {
     }
 
     100% {
+        background: #4286f4;
         height: 100%;
     }
 }
