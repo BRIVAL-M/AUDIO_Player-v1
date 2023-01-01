@@ -76,7 +76,7 @@ function random_bg_color() {
     }
     let Color1 = populate('#');
     let Color2 = populate('#');
-    var angle = 'to right';
+    const angle = 'to right';
 
     let gradient = 'linear-gradient(' + angle + ',' + Color1 + ', ' + Color2 + ")";
     document.body.style.background = gradient;
